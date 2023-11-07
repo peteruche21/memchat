@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1033095123485",
+    "project_id": "mem-chat-permaweb",
+    "storage_bucket": "mem-chat-permaweb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033095123485:android:ae4100cebe43b4c49bacf4",
+        "android_client_info": {
+          "package_name": "com.memchat.permaweb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0PeGp4VxcJUQeNQm75sMO3My8PW6iaGo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
