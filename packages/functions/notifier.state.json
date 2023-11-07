@@ -1,0 +1,8 @@
+{
+  "name": "mem chat push notifier",
+  "google_cloud_fcm_endpoint": "https://fcm.googleapis.com/v1/projects/memchat/messages:send",
+  "firebase_cloud_messaging_token": "",
+  "publicFunctions": {
+    "notify": ["recipient", "message"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "memchat",
+  "version": "1.0.0",
+  "description": "self custodial chat on the permaweb",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "keywords": [],
+  "author": "peter <peter@example.com>",
+  "license": "ISC"
+}

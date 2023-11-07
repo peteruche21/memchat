@@ -1,0 +1,146 @@
+{
+  "name": "mem chat",
+  "user_profiles": {
+    "0xf633D7d201b2CF818b4D8b026794DCBE0ccF3Af0": {
+      "address": "0xf633D7d201b2CF818b4D8b026794DCBE0ccF3Af0",
+      "alias": "",
+      "fcm_token": "fcm_test_token",
+      "registered_at": 1699194686309,
+      "chats": [],
+      "friends": [],
+      "requests": [],
+      "blocked": [],
+      "status_exclude_list": [],
+      "settings": {
+        "status": 0,
+        "message_preferences": {
+          "accept_messages": true,
+          "read_reciepts": true,
+          "push_notifications": true
+        },
+        "account_info_json": "",
+        "profile_picture_url": "",
+        "profile_bio": ""
+      }
+    },
+    "0xb4404a2285bef019ec11b0dfc908d7de53498529": {
+      "address": "0xb4404a2285bef019ec11b0dfc908d7de53498529",
+      "alias": "",
+      "fcm_token": "fcm_null",
+      "registered_at": 1699370416464,
+      "chats": [],
+      "friends": [],
+      "requests": [],
+      "blocked": [],
+      "status_exclude_list": [],
+      "settings": {
+        "status": 0,
+        "message_preferences": {
+          "accept_messages": true,
+          "read_reciepts": true,
+          "push_notifications": true
+        },
+        "account_info_json": "",
+        "profile_picture_url": "",
+        "profile_bio": ""
+      }
+    }
+  },
+  "status_updates": {},
+  "chats": {},
+  "publicFunctions": {
+    "register": [
+      "caller",
+      "signature",
+      "data"
+    ],
+    "updateProfile": [
+      "caller",
+      "signature",
+      "data"
+    ],
+    "deleteProfile": [
+      "caller",
+      "signature"
+    ],
+    "addStatusUpdate": [
+      "caller",
+      "type",
+      "src"
+    ],
+    "blockUser": [
+      "caller",
+      "uid"
+    ],
+    "unblockUser": [
+      "caller",
+      "uid"
+    ],
+    "excludeStatusUpdate": [
+      "caller",
+      "uid"
+    ],
+    "undoStatusUpdateExclude": [
+      "caller",
+      "uid"
+    ],
+    "createGroup": [
+      "caller",
+      "gid",
+      "name"
+    ],
+    "joinGroup": [
+      "caller",
+      "gid"
+    ],
+    "deleteGroup": [
+      "caller",
+      "gid"
+    ],
+    "deleteGroupMember": [
+      "caller",
+      "gid",
+      "member"
+    ],
+    "transferGroupOwnership": [
+      "caller",
+      "gid",
+      "newOwner"
+    ],
+    "addFriend": [
+      "caller",
+      "friend"
+    ],
+    "removeFriend": [
+      "caller",
+      "friend"
+    ],
+    "sendMessage": [
+      "caller",
+      "recipient",
+      "chatId",
+      "message"
+    ],
+    "deleteMessage": [
+      "caller",
+      "chatId",
+      "mid"
+    ],
+    "acceptChat": [
+      "caller",
+      "chatId"
+    ],
+    "declineChat": [
+      "caller",
+      "chatId"
+    ],
+    "readChat": [
+      "caller",
+      "chatId"
+    ],
+    "leaveChat": [
+      "caller",
+      "chatId"
+    ]
+  }
+}

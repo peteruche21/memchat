@@ -1,0 +1,8 @@
+{
+  "name": "mem chat signature verifier",
+  "signed": [],
+  "evm_molecule_endpoint": "http://evm.molecule.sh",
+  "publicFunctions": {
+    "sign": ["caller", "message", "signature"]
+  }
+}

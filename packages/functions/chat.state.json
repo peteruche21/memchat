@@ -1,0 +1,30 @@
+{
+    "name": "mem chat",
+    "user_profiles": {},
+    "status_updates": {},
+    "chats": {},
+    "publicFunctions": {
+      "register": ["caller", "signature", "data"],
+      "updateProfile": ["caller", "signature", "data"],
+      "deleteProfile": ["caller", "signature"],
+      "addStatusUpdate": ["caller", "type", "src"],
+      "blockUser": ["caller", "uid"],
+      "unblockUser": ["caller", "uid"],
+      "excludeStatusUpdate": ["caller", "uid"],
+      "undoStatusUpdateExclude": ["caller", "uid"],
+      "createGroup": ["caller", "gid", "name"],
+      "joinGroup": ["caller", "gid"],
+      "deleteGroup": ["caller", "gid"],
+      "deleteGroupMember": ["caller", "gid", "member"],
+      "transferGroupOwnership": ["caller", "gid", "newOwner"],
+      "addFriend": ["caller", "friend"],
+      "removeFriend": ["caller", "friend"],
+      "sendMessage": ["caller", "recipient", "chatId", "message"],
+      "deleteMessage": ["caller", "chatId", "mid"],
+      "acceptChat": ["caller", "chatId"],
+      "declineChat": ["caller", "chatId"],
+      "readChat": ["caller", "chatId"],
+      "leaveChat": ["caller", "chatId"]
+    }
+  }
+  
