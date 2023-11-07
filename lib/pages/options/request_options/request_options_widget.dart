@@ -39,7 +39,7 @@ class _RequestOptionsWidgetState extends State<RequestOptionsWidget> {
       padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
       child: Container(
         width: 300.0,
-        height: 130.0,
+        height: 135.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
           boxShadow: const [

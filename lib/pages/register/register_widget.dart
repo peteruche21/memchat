@@ -1,11 +1,9 @@
 import '/auth/custom_auth/auth_util.dart';
-import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
-import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -229,19 +227,6 @@ class _RegisterWidgetState extends State<RegisterWidget>
                         onPressed: () async {
                           _model.user = actions.createWallet(
                             _model.pinCodeController!.text,
-                          );
-                          _model.rngUid = actions.randomUuid();
-                          _model.signature = actions.signMessage(
-                            _model.user!,
-                            _model.pinCodeController!.text,
-                            _model.rngUid!,
-                          );
-                          _model.response =
-                              await MemGroup.registerANewUserCall.call(
-                            caller: _model.user?.address,
-                            message:
-                                functions.getMemAuthMessage(_model.rngUid!),
-                            signature: _model.signature,
                           );
                           GoRouter.of(context).prepareAuthEvent();
                           await authManager.signIn(

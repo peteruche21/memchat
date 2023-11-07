@@ -3,6 +3,8 @@ import '/components/group_drawer/group_drawer_widget.dart';
 import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/pages/options/message_options/message_options_widget.dart';
+import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -202,26 +204,53 @@ class _ChatWidgetState extends State<ChatWidget> {
                                   ),
                                 ),
                               ),
-                              Container(
-                                constraints: const BoxConstraints(
-                                  minHeight: 40.0,
-                                  maxWidth: 240.0,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF4B39EF),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 12.0, 12.0, 8.0),
-                                  child: Text(
-                                    'Hello World in a very long format ',
-                                    textAlign: TextAlign.start,
-                                    style: GoogleFonts.getFont(
-                                      'Lexend Deca',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14.0,
+                              Builder(
+                                builder: (context) => InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onLongPress: () async {
+                                    await showAlignedDialog(
+                                      context: context,
+                                      isGlobal: true,
+                                      avoidOverflow: false,
+                                      targetAnchor: const AlignmentDirectional(
+                                              0.0, 0.0)
+                                          .resolve(Directionality.of(context)),
+                                      followerAnchor: const AlignmentDirectional(
+                                              0.0, 0.0)
+                                          .resolve(Directionality.of(context)),
+                                      builder: (dialogContext) {
+                                        return const Material(
+                                          color: Colors.transparent,
+                                          child: MessageOptionsWidget(),
+                                        );
+                                      },
+                                    ).then((value) => setState(() {}));
+                                  },
+                                  child: Container(
+                                    constraints: const BoxConstraints(
+                                      minHeight: 40.0,
+                                      maxWidth: 240.0,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFF4B39EF),
+                                      borderRadius: BorderRadius.circular(8.0),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          12.0, 12.0, 12.0, 8.0),
+                                      child: Text(
+                                        'Hello World in a very long format ',
+                                        textAlign: TextAlign.start,
+                                        style: GoogleFonts.getFont(
+                                          'Lexend Deca',
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 14.0,
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -386,186 +415,12 @@ class _ChatWidgetState extends State<ChatWidget> {
                             .around(const SizedBox(width: 8.0)),
                       ),
                     ),
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              scaffoldKey.currentState!.openEndDrawer();
-                            },
-                            child: Container(
-                              width: 32.0,
-                              height: 32.0,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                              ),
-                              child: Image.network(
-                                'https://picsum.photos/seed/762/600',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                constraints: const BoxConstraints(
-                                  minHeight: 40.0,
-                                  maxWidth: 240.0,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF4B39EF),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 12.0, 12.0, 8.0),
-                                  child: Text(
-                                    'small text',
-                                    textAlign: TextAlign.start,
-                                    style: GoogleFonts.getFont(
-                                      'Lexend Deca',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                constraints: const BoxConstraints(
-                                  minHeight: 40.0,
-                                  maxWidth: 240.0,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF4B39EF),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 12.0, 12.0, 8.0),
-                                  child: Text(
-                                    'Hello World in a very long format ',
-                                    textAlign: TextAlign.start,
-                                    style: GoogleFonts.getFont(
-                                      'Lexend Deca',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ].divide(const SizedBox(height: 8.0)),
-                          ),
-                        ]
-                            .divide(const SizedBox(width: 8.0))
-                            .around(const SizedBox(width: 8.0)),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              scaffoldKey.currentState!.openEndDrawer();
-                            },
-                            child: Container(
-                              width: 32.0,
-                              height: 32.0,
-                              clipBehavior: Clip.antiAlias,
-                              decoration: const BoxDecoration(
-                                shape: BoxShape.circle,
-                              ),
-                              child: Image.network(
-                                'https://picsum.photos/seed/762/600',
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                constraints: const BoxConstraints(
-                                  minHeight: 40.0,
-                                  maxWidth: 240.0,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF4B39EF),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 12.0, 12.0, 8.0),
-                                  child: Text(
-                                    'small text',
-                                    textAlign: TextAlign.start,
-                                    style: GoogleFonts.getFont(
-                                      'Lexend Deca',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                constraints: const BoxConstraints(
-                                  minHeight: 40.0,
-                                  maxWidth: 240.0,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF4B39EF),
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      12.0, 12.0, 12.0, 8.0),
-                                  child: Text(
-                                    'Hello World in a very long format ',
-                                    textAlign: TextAlign.start,
-                                    style: GoogleFonts.getFont(
-                                      'Lexend Deca',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 14.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ].divide(const SizedBox(height: 8.0)),
-                          ),
-                        ]
-                            .divide(const SizedBox(width: 8.0))
-                            .around(const SizedBox(width: 8.0)),
-                      ),
-                    ),
                   ],
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 16.0),
               child: Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -596,34 +451,10 @@ class _ChatWidgetState extends State<ChatWidget> {
                               color: const Color(0xFF95A1AC),
                               fontSize: 14.0,
                             ),
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).alternate,
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).primary,
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            errorBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).error,
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            focusedErrorBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).error,
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
+                            enabledBorder: InputBorder.none,
+                            focusedBorder: InputBorder.none,
+                            errorBorder: InputBorder.none,
+                            focusedErrorBorder: InputBorder.none,
                           ),
                           style: GoogleFonts.getFont(
                             'Lexend Deca',

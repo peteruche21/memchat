@@ -1,4 +1,3 @@
-import '/backend/api_requests/api_calls.dart';
 import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'register_widget.dart' show RegisterWidget;
@@ -23,12 +22,6 @@ class RegisterModel extends FlutterFlowModel<RegisterWidget> {
 
   // Stores action output result for [Custom Action - createWallet] action in Button widget.
   WalletStruct? user;
-  // Stores action output result for [Custom Action - randomUuid] action in Button widget.
-  String? rngUid;
-  // Stores action output result for [Custom Action - signMessage] action in Button widget.
-  String? signature;
-  // Stores action output result for [Backend Call - API (Register a New User)] action in Button widget.
-  ApiCallResponse? response;
 
   /// Initialization and disposal methods.
 

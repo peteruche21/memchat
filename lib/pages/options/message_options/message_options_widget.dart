@@ -1,18 +1,19 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'friends_options_model.dart';
-export 'friends_options_model.dart';
+import 'package:flutter/services.dart';
+import 'message_options_model.dart';
+export 'message_options_model.dart';
 
-class FriendsOptionsWidget extends StatefulWidget {
-  const FriendsOptionsWidget({super.key});
+class MessageOptionsWidget extends StatefulWidget {
+  const MessageOptionsWidget({super.key});
 
   @override
-  _FriendsOptionsWidgetState createState() => _FriendsOptionsWidgetState();
+  _MessageOptionsWidgetState createState() => _MessageOptionsWidgetState();
 }
 
-class _FriendsOptionsWidgetState extends State<FriendsOptionsWidget> {
-  late FriendsOptionsModel _model;
+class _MessageOptionsWidgetState extends State<MessageOptionsWidget> {
+  late MessageOptionsModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -23,7 +24,7 @@ class _FriendsOptionsWidgetState extends State<FriendsOptionsWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => FriendsOptionsModel());
+    _model = createModel(context, () => MessageOptionsModel());
   }
 
   @override
@@ -39,7 +40,7 @@ class _FriendsOptionsWidgetState extends State<FriendsOptionsWidget> {
       padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 16.0, 16.0),
       child: Container(
         width: 300.0,
-        height: 135.0,
+        height: 100.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
           boxShadow: const [
@@ -60,34 +61,44 @@ class _FriendsOptionsWidgetState extends State<FriendsOptionsWidget> {
             children: [
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 0.0, 0.0),
-                child: Container(
-                  width: double.infinity,
-                  decoration: const BoxDecoration(),
-                  child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              12.0, 0.0, 0.0, 0.0),
-                          child: Icon(
-                            Icons.person_remove,
-                            color: FlutterFlowTheme.of(context).warning,
-                            size: 20.0,
-                          ),
-                        ),
-                        Expanded(
-                          child: Padding(
+                child: InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    await Clipboard.setData(const ClipboardData(text: 'simple text'));
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    decoration: const BoxDecoration(),
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
-                            child: Text(
-                              'Remove from friends',
-                              style: FlutterFlowTheme.of(context).bodyMedium,
+                            child: Icon(
+                              Icons.content_copy,
+                              color: FlutterFlowTheme.of(context).grayIcon,
+                              size: 20.0,
                             ),
                           ),
-                        ),
-                      ],
+                          Expanded(
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  12.0, 0.0, 0.0, 0.0),
+                              child: Text(
+                                'Copy Mesage',
+                                style: FlutterFlowTheme.of(context).bodyMedium,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -104,38 +115,7 @@ class _FriendsOptionsWidgetState extends State<FriendsOptionsWidget> {
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
                         child: Icon(
-                          Icons.hide_source_rounded,
-                          color: FlutterFlowTheme.of(context).warning,
-                          size: 20.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              12.0, 0.0, 0.0, 0.0),
-                          child: Text(
-                            'Hide from Status',
-                            style: FlutterFlowTheme.of(context).bodyMedium,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                decoration: const BoxDecoration(),
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
-                        child: Icon(
-                          Icons.block_rounded,
+                          Icons.delete,
                           color: FlutterFlowTheme.of(context).error,
                           size: 20.0,
                         ),
@@ -145,7 +125,7 @@ class _FriendsOptionsWidgetState extends State<FriendsOptionsWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               12.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            'Block User',
+                            'Delete Message',
                             style: FlutterFlowTheme.of(context).bodyMedium,
                           ),
                         ),

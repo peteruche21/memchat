@@ -45,7 +45,7 @@ class _QRCodeWidgetState extends State<QRCodeWidget> {
       backgroundColor: widget.bgColor ?? Colors.transparent,
       embeddedImage: AssetImage(widget.image),
       embeddedImageStyle: QrEmbeddedImageStyle(
-        size: Size(80, 80),
+        size: Size(35, 35),
       ),
     );
   }
