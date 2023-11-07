@@ -30,7 +30,12 @@ app.use(
     useTempFiles: true,
   })
 );
-app.use(cors());
+app.use(cors(
+  {
+    origin: "*",
+    methods: ["GET", "POST"],
+  }
+));
 app.use(passport.initialize());
 
 passport.use(
