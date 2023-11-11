@@ -26,6 +26,7 @@
     "express-fileupload": "^1.4.2",
     "passport": "^0.6.0",
     "passport-http-header-strategy": "^1.1.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "@google-cloud/secret-manager": "^5.0.1"
   }
 }

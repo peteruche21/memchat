@@ -2,7 +2,7 @@ const ethers = require("ethers");
 
 async function signMessageWithPrivateKey() {
   const wallet = new ethers.Wallet(
-    "0x9a91a1242f7026d6cc83599538ec04f82f7639218869c7abae1567a6cffe329a"
+    "0x460da52673ddbe548c0d6f006034547171627b2d94a0342a5b6f18ea273030d0"
   );
 
   const data = "a simple data string that will be signed with the private key";
@@ -39,3 +39,5 @@ module.exports = {
 
 //   return token;
 // }
+
+

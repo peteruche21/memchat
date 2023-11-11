@@ -3,12 +3,12 @@ const { verifyMessageMock } = require("./sign");
 
 async function ContractAssert(condition, message) {
   if (!condition) {
-    throw new Error(message);
+   return(message);
   }
 }
 
 async function ContractError(message) {
-  throw new Error(message);
+return(message);
 }
 
 class EXM {
